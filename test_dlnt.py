@@ -1,12 +1,11 @@
-import matplotlib
 import os
 import re
 import cv2
 import numpy as np
 from PIL import Image
 from tqdm import tqdm
+from sklearn.utils import shuffle
 import matplotlib.pyplot as plt
-
 
 import keras
 from keras.models import Sequential, load_model
@@ -20,7 +19,6 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 from keras.applications.vgg16 import VGG16
 from keras.layers import LSTM
-from sklearn.utils import shuffle
 
 OUTPUT_FNAME = 'RESULT.png'
 
